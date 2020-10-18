@@ -13,7 +13,8 @@ class TodoController extends Controller
      */
     public function index()
     {
-        //
+        // Todo一覧の表示
+        $todos = Todo::all();
     }
 
     /**
