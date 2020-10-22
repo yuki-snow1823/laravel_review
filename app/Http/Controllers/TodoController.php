@@ -19,6 +19,9 @@ class TodoController extends Controller
         return view("todos/index")->with([
             "todos" => $todos
         ]);
+        // return view("layouts/footer")->with([
+        //     "todos" => $todos
+        // ]);
     }
 
     /**
