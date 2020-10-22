@@ -13,13 +13,14 @@
   <h2>{{ $todos[0]->title }}</h2>
   <h2>{{ $todos }}</h2>
 
-  {{-- 普通に出力される --}}
-@extends('layouts.footer')
-@section('footer')
-<footer>
-    フッター
-</footer>
-@endsection
+  {{-- 普通に出力される。親には出力される？ --}}
+  @extends('layouts.footer')
+
+  {{-- このページ内のlayoutの部分 --}}
+  @section('test')
+    <h1>テスト</h1>
+    <h2>テスト！！</h2>
+  @endsection
 
 </body>
 
