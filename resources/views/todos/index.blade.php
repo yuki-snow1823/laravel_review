@@ -8,6 +8,7 @@
 </head>
 <body>
   <h1>test</h1>
+  <h2>{{ $todos[0]->title }}</h2>
   <h2>{{ $todos }}</h2>
 </body>
 </html>
