@@ -40,9 +40,10 @@ class TodoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) // 送信した中身が入っているわけではない？
     {
-        // echo ("hello");
+        $message = $request->message;
+        echo ($message);
     }
 
     /**
