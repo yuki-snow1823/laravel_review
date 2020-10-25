@@ -22,7 +22,7 @@
     <h2>テスト！！</h2>
   @endsection
 
-  <form action="/index" method="POST">
+  <form action="/todo" method="POST">
     @csrf
     <input type="text">
     <input type="submit">

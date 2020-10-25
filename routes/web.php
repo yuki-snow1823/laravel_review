@@ -15,3 +15,5 @@ use App\Http\Controllers\TodoController;
 */
 
 Route::get('/',  [TodoController::class, 'index']);
+// Route::post('/',  [TodoController::class, 'store']);
+Route::resource('todo', TodoController::class); 
