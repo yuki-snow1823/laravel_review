@@ -10,8 +10,16 @@
 
 <body>
   <h1>test</h1>
-  <h2>{{ $todos[0]->title }}</h2>
-  <h2>{{ $todos }}</h2>
+  <table border="2">
+    <th>タイトル</th>
+    <th>内容</th>
+    @foreach ($todos as $todo)
+    <tr>
+      <td><p>{{ $todo->title }}</p></td>
+      <td><p>{{ $todo->context}}</p></td>
+    <tr>
+      @endforeach
+  </table>
 
   {{-- 普通に出力される。親には出力される？ --}}
   @extends('layouts.footer')
