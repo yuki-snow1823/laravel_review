@@ -48,7 +48,7 @@ class TodoController extends Controller
         $todo->context = "test";
         $todo->save();
         // なんかjsonが帰ってくる
-        echo ($todo);
+        return redirect('/');
     }
 
     /**
