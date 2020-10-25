@@ -43,7 +43,12 @@ class TodoController extends Controller
     public function store(Request $request) // 送信した中身が入っているわけではない？
     {
         $message = $request->message;
-        echo ($message);
+        $todo = new Todo;
+        $todo->title = $request->message;
+        $todo->context = "test";
+        $todo->save();
+        // なんかjsonが帰ってくる
+        echo ($todo);
     }
 
     /**
