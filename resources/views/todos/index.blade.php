@@ -9,14 +9,18 @@
 </head>
 
 <body>
-  <h1>test</h1>
+  <h1>インデックス</h1>
   <table border="2">
     <th>タイトル</th>
     <th>内容</th>
     @foreach ($todos as $todo)
     <tr>
-      <td><p>{{ $todo->title }}</p></td>
-      <td><p>{{ $todo->context}}</p></td>
+      <td>
+        <p>{{ $todo->title }}</p>
+      </td>
+      <td>
+        <p>{{ $todo->context}}</p>
+      </td>
     <tr>
       @endforeach
   </table>
@@ -26,8 +30,8 @@
 
   {{-- このページ内のlayoutの部分 --}}
   @section('test')
-    <h1>テスト</h1>
-    <h2>テスト！！</h2>
+  <h1>テスト</h1>
+  <h2>テスト！！</h2>
   @endsection
 
   <form action="/todo" method="POST">
@@ -35,6 +39,13 @@
     <input type="text" name="message">
     <input type="submit">
   </form>
+
+<h2>スコープの中身が出る予定</h2>
+  @foreach ($scopes as $scope)
+  <h2>{{ $scope }}</h2>
+  @endforeach
+<h2>スコープの中身の終わり</h2>
+
 </body>
 
 </html>
