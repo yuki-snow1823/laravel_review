@@ -52,6 +52,7 @@ class TodoController extends Controller
     public function store(TodoRequest $request) // 送信した中身が入っているわけではない？
     {
         $todo = new Todo;
+        // messageという名前で送っているからバージョン かからないのでは？
         $todo->title = $request->message;
         $todo->context = "test";
         $todo->save();

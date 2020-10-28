@@ -30,7 +30,13 @@ class TodoRequest extends FormRequest
     public function rules()
     {
         return [
-            "title" => "email"
+            // ここと
+            "message" =>  ['required','min:3','max:10'],
         ];
+    }
+
+    public function messages()
+    {
+        return ["message.required" => "エラーじゃ"];
     }
 }
