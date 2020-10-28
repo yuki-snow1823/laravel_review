@@ -37,8 +37,13 @@
   <form action="/todo" method="POST">
     @csrf
     <input type="text" name="message">
+    {{-- ここの名前でバリデーションかかる --}}
     <input type="submit">
   </form>
+  
+  @error('message')
+      {{ $message }}
+  @enderror
 
 <h2>スコープの中身が出る予定</h2>
   @foreach ($scopes as $scope)
