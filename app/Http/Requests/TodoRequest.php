@@ -11,9 +11,15 @@ class TodoRequest extends FormRequest
      *
      * @return bool
      */
+    // どこからのアクセスか判定
     public function authorize()
     {
-        return false;
+        // ここは機能している
+        if ($this->path() == 'todo') {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -24,7 +30,7 @@ class TodoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "title" => "email"
         ];
     }
 }
