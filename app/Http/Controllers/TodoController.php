@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Todo;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\TodoRequest;
+
 
 
 class TodoController extends Controller
@@ -47,9 +49,8 @@ class TodoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) // 送信した中身が入っているわけではない？
+    public function store(TodoRequest $request) // 送信した中身が入っているわけではない？
     {
-        $message = $request->message;
         $todo = new Todo;
         $todo->title = $request->message;
         $todo->context = "test";
