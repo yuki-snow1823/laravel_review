@@ -22,8 +22,8 @@ class TodoController extends Controller
         $todos = Todo::all();
         // $query = "SELECT * from todos;";
         $query = DB::table('todos')->get();
-        
-        $scopeWords = Todo::Title($query);
+        $scopeWords = Todo::title($query)->get();
+        // echo($scopeWords);
         // echo ($query);
         return view("todos/index")->with([
             "todos" => $todos, "scopes" => $scopeWords
