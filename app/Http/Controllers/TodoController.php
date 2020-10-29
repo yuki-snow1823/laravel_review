@@ -22,6 +22,7 @@ class TodoController extends Controller
         $todos = Todo::all();
         // $query = "SELECT * from todos;";
         $query = DB::table('todos')->get();
+        // table全ての中で、さらに絞ったものだけ表示している
         $scopeWords = Todo::title($query)->get();
         // echo($scopeWords);
         // echo ($query);
