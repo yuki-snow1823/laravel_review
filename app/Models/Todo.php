@@ -13,4 +13,8 @@ class Todo extends Model
         // echo ($query);
         return $query->where("context", "=", "test");
     }
+
+    public function calc ($number) {
+        return $number + 5;
+    }
 }
