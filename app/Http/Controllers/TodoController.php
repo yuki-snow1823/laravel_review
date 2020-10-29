@@ -24,10 +24,12 @@ class TodoController extends Controller
         $query = DB::table('todos')->get();
         // table全ての中で、さらに絞ったものだけ表示している
         $scopeWords = Todo::title($query)->get();
+        dd($scopeWords)
         // echo($scopeWords);
         // echo ($query);
+        $resultCalc = Todo::calc(10);
         return view("todos/index")->with([
-            "todos" => $todos, "scopes" => $scopeWords
+            "todos" => $todos, "scopes" => $scopeWords, "calc" => $resultCalc
         ]);
         // return view("layouts/footer")->with([
         //     "todos" => $todos
