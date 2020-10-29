@@ -51,7 +51,9 @@
   @endforeach
 <h2>スコープの中身の終わり</h2>
 
-{{ $resultCalc }}
+{{ $calc }}
+
+{{ $composer_message }}
 </body>
 
 </html>
